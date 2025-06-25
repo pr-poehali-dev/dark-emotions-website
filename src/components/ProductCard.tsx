@@ -1,5 +1,4 @@
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 interface Product {
   id: number;
@@ -11,38 +10,28 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
-  onPurchase: (product: Product) => void;
+  onClick: (product: Product) => void;
 }
 
-const ProductCard = ({ product, onPurchase }: ProductCardProps) => {
+const ProductCard = ({ product, onClick }: ProductCardProps) => {
   return (
-    <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-all duration-300 group">
-      <div className="aspect-square overflow-hidden">
+    <Card
+      className="bg-black border-gray-800 hover:border-gray-600 transition-all duration-500 cursor-pointer group overflow-hidden"
+      onClick={() => onClick(product)}
+    >
+      <div className="relative aspect-[4/5] overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
+        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-500"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+          <h3 className="text-lg font-light text-white tracking-wide leading-tight">
+            {product.name}
+          </h3>
+        </div>
       </div>
-      <CardContent className="p-6">
-        <h3 className="text-xl font-serif text-white mb-2 group-hover:text-purple-300 transition-colors">
-          {product.name}
-        </h3>
-        <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-          {product.description}
-        </p>
-        <p className="text-2xl font-light text-purple-300 mb-4">
-          ₽{product.price.toLocaleString()}
-        </p>
-      </CardContent>
-      <CardFooter className="p-6 pt-0">
-        <Button
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white"
-          onClick={() => onPurchase(product)}
-        >
-          Приобрести
-        </Button>
-      </CardFooter>
     </Card>
   );
 };

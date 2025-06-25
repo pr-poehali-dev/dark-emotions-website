@@ -50,7 +50,7 @@ const ProductGallery = () => {
     },
   ];
 
-  const handlePurchase = (product: Product) => {
+  const handleProductClick = (product: Product) => {
     setSelectedProduct(product);
   };
 
@@ -72,7 +72,7 @@ const ProductGallery = () => {
             <ProductCard
               key={product.id}
               product={product}
-              onPurchase={handlePurchase}
+              onClick={handleProductClick}
             />
           ))}
         </div>

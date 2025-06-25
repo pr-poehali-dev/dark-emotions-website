@@ -11,10 +11,10 @@ const Hero = () => {
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
           Одежда, рожденная из глубины переживаний, боли и красоты меланхолии
         </p>
-        <div className="w-24 h-px bg-purple-500 mx-auto mb-12"></div>
+        <div className="w-24 h-px bg-gray-400 mx-auto mb-12"></div>
         <Button
           variant="outline"
-          className="px-8 py-3 text-lg border-purple-500 text-purple-300 hover:bg-purple-500 hover:text-white transition-all duration-300"
+          className="px-8 py-3 text-lg border-gray-400 text-gray-300 hover:bg-white hover:text-black transition-all duration-300 font-light"
           onClick={() =>
             document
               .getElementById("collection")

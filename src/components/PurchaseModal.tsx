@@ -48,7 +48,7 @@ const PurchaseModal = ({ product, onClose }: PurchaseModalProps) => {
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
-      <DialogContent className="bg-gray-900 border-gray-700 text-white max-w-md">
+      <DialogContent className="bg-black border-gray-800 text-white max-w-md">
         <DialogHeader>
           <DialogTitle className="text-2xl font-serif text-center">
             {product.name}
@@ -66,7 +66,7 @@ const PurchaseModal = ({ product, onClose }: PurchaseModalProps) => {
 
           <div className="text-center">
             <p className="text-gray-400 mb-4">{product.description}</p>
-            <p className="text-2xl font-light text-purple-300">
+            <p className="text-2xl font-light text-gray-300">
               ₽{product.price.toLocaleString()}
             </p>
           </div>
@@ -80,11 +80,11 @@ const PurchaseModal = ({ product, onClose }: PurchaseModalProps) => {
                     <RadioGroupItem
                       value={size}
                       id={size}
-                      className="border-purple-500 text-purple-500"
+                      className="border-gray-600 text-gray-300"
                     />
                     <Label
                       htmlFor={size}
-                      className="text-white cursor-pointer hover:text-purple-300 transition-colors"
+                      className="text-white cursor-pointer hover:text-gray-300 transition-colors"
                     >
                       {size}
                     </Label>
@@ -95,7 +95,7 @@ const PurchaseModal = ({ product, onClose }: PurchaseModalProps) => {
           </div>
 
           <Button
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+            className="w-full bg-white text-black hover:bg-gray-200"
             onClick={handleContinue}
             disabled={!selectedSize}
           >

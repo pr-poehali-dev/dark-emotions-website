@@ -6,13 +6,13 @@ const StorySection = () => {
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">
             История Переживаний
           </h2>
-          <div className="w-24 h-px bg-purple-500 mx-auto"></div>
+          <div className="w-24 h-px bg-gray-400 mx-auto"></div>
         </div>
 
         <div className="space-y-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-serif text-purple-300 mb-4">
+              <h3 className="text-2xl font-serif text-gray-300 mb-4">
                 Рождение из Тьмы
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -43,7 +43,7 @@ const StorySection = () => {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h3 className="text-2xl font-serif text-purple-300 mb-4">
+              <h3 className="text-2xl font-serif text-gray-300 mb-4">
                 Философия Меланхолии
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -59,7 +59,7 @@ const StorySection = () => {
           </div>
 
           <div className="text-center py-12">
-            <h3 className="text-2xl font-serif text-purple-300 mb-8">
+            <h3 className="text-2xl font-serif text-gray-300 mb-8">
               Создавая для Душ, Готовых Чувствовать
             </h3>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
